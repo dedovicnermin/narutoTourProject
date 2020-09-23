@@ -1,0 +1,117 @@
+/* psuedo elements. used for special state of element. */
+/* default link hover = blue visited = purple */
+.btn,
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    margin-top: 2rem;
+    display: inline-block;
+    border-radius: 20rem; /* to make button border round */
+    font-size: 1.6rem;
+    position: relative;
+
+    transition: all .2s; 
+    /* this class is the begining/normal states. It is delcared here that for all states on this element, there will be a .2s animation. we already labeled the transitions with out transfom:translateY() */
+
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    /* X Y Blur-amount color-shadow */
+}
+
+/* when we click aka active */
+.btn:active, .btn:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 1rem rgba(0, 0, 0, .2);
+}
+
+
+
+.btn--wide {
+    background-color: whitesmoke;
+    color: limegreen;
+    
+    
+}
+
+.btn--wide-1 {
+    background-color: whitesmoke;
+    color: $color-royalblue-dark;
+}
+
+.btn--wide-2 {
+    background-color: whitesmoke;
+    color: $color-blood;  
+}
+
+.btn--wide-3 {
+    background-color: $color-royalblue-dark;
+    color: $color-white;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    /* 100% of the button */
+
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--wide::after {
+    background-color: whitesmoke;
+}
+
+.btn:hover::after {
+    /* grow and fade out */
+    transform: scaleX(1.4) scaleY(1.6); /*increase element  scaleX() scaleY() scale()*/ 
+    opacity: 0;
+}
+
+
+
+.btn--animated {
+    animation: moveInBottom 0.5s ease-out .75s;
+    animation-fill-mode: backwards;
+
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+}

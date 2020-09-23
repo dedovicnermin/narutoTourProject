@@ -1,0 +1,59 @@
+/* animation named: */
+@keyframes moveInLeft {
+    /* specify what u want to happen at each moment of time in animarition */
+    /* before the ani starts aka the start //// initial state*/
+    /* first we want it to be invisible */
+    0% {
+        opacity: 0;
+        /* we want to animate from the left to right direction (X direction) */
+        /* positive value means go to the right, negative values means go to the left */
+        transform: translateX(-100px);
+
+        /* transform: rotate(-50deg); */
+    }
+    /* we can put other steps in the middle. want something to happen when the animation is at 80% 70% 60% etc */
+ 
+    60% {
+        /* transform: rotate(120deg);  */
+    }
+
+    80% {
+        transform: translateX(1.5rem);
+    }
+
+    /* when the animation finishes //// final state*/
+    100% {
+        opacity: 1;
+        /* gonna look excatly the way it originally looks without animaation */
+        transform: translate(0); 
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
