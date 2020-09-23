@@ -4,6 +4,7 @@ Displaying front-end capability
 ## Details
 - No back-end functionality.
 - Front-end using HTML/CSS/SASS
+- Do not have ownership of any images used.
 
 ## Getting it to run
 - if one does not have the 'live-server' npm package globally, install it within this project.
@@ -28,4 +29,6 @@ Displaying front-end capability
 - radio button animations
 - footer link animations
 
-
+### Always Remember:
+Those who break the rules and laws are regarded as scum. But, those who'd abandon even one of their friends are worse than scum.
+- Obito Uchiha
